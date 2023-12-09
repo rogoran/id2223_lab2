@@ -58,7 +58,7 @@ The following paper evaluated how data from L2 speakers affect the performance o
 
 Knowles, A., & Mattsson, F. (2022). Understanding Automatic Speech Recognition for L2 Speakers and Unintended Discrimination in Artificial Intelligence (Dissertation). Retrieved from https://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-319360
 
-The paper shows how retraining a model with data from L2 speakers improves the model performance (lower WER score). 
+The paper shows how retraining a model with data from L2 speakers improves the model performance (lower WER score). We identified these data sources since they are WAV files which can be encoded and used as training data for the Whisper model.
 
 Using additional, but different data can make the model more nuanced due to the following factors: 
 
@@ -84,5 +84,5 @@ Increased Vocabulary Coverage:
 
 However, it's important to note that the effectiveness of retraining with L2 speaker data depends on various factors, including the quality and quantity of the added data, the initial model architecture, and the characteristics of the target user population. The specific insights from the paper you mentioned would provide more context and details regarding the observed improvements in ASR performance for L2 speakers.
 
-The paper used datasets Ville (~2 hours of labeled speech) and Språkcafé (unknown length). We tried to contact the authors to retrieve the data but to no
+The paper used datasets Ville (~2 hours of labeled speech) and Språkcafé (unknown length). We tried to contact the authors to retrieve the data but to no success. 
 
