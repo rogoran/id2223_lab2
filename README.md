@@ -26,6 +26,11 @@ From the baseline result we learn that with more steps:
 
 This means that the model probably overfits at some point around 2000.
 
+To prevent the model overfitting, we tried to add weight decay because applying it to the parameters of your seq2seq model can help prevent overfitting and improve generalization performance. 
+Loss function changes to the following: ![Skärmavbild 2023-12-09 kl  15 37 37](https://github.com/rogoran/id2223_lab2/assets/98389590/550b4939-f837-4db7-a298-59fdb00841ec)
+Hence preventing that certain weights affect the outcome too much. 
+
+
 "Fine tuned" parameters:
 
 ![Skärmavbild 2023-12-09 kl  15 27 41](https://github.com/rogoran/id2223_lab2/assets/98389590/bb88d4b6-ed2e-4eb0-a3b0-77b2eb71d3bc)
@@ -43,3 +48,7 @@ Result
 
 (b) data-centric approach - identify new data sources that enable you to train a better model that one provided in the blog post
 
+Unfortunately we couldn't access any new data sources, but we would like to try this dataset:
+HÄMTA LÄNK TILL ALFREDS
+
+We believe this data could improve the model since it Swedish
