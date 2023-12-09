@@ -28,6 +28,7 @@ This means that the model probably overfits at some point around 2000.
 
 "Fine tuned" parameters:
 
+![Skärmavbild 2023-12-09 kl  15 27 41](https://github.com/rogoran/id2223_lab2/assets/98389590/bb88d4b6-ed2e-4eb0-a3b0-77b2eb71d3bc)
 
 Result
 
