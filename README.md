@@ -2,7 +2,9 @@ Link to app: https://huggingface.co/Siphh
 
 
 Work done in effort to improve model performance: 
-(a) model-centric approach - e.g., tune hyperparameters, change the fine-tuning model architecture, etc 
+(a) model-centric approach 
+
+
 Default hyperparameters:
 
 <img width="760" alt="Skärmavbild 2023-12-06 kl  10 21 50" src="https://github.com/rogoran/id2223_lab2/assets/98389590/5d7210e0-2ac1-4613-83be-188a3d60114e">
