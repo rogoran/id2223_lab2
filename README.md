@@ -5,9 +5,6 @@ Dataset used:
 
 50% of common voice swedish dataset: https://commonvoice.mozilla.org/sv-SE 
 
-Work done in effort to improve model performance: 
-(a) model-centric approach 
-
 
 Default hyperparameters:
 
@@ -23,6 +20,12 @@ Result
 | 4000 | 0.000500      | 0.447096         | 70.4064   |
 
 
+We now want to improve the model performance which can be done in different ways. One could use a model-centric approach, or a data-centric.
+
+##Model-centric: 
+
+#Tune hyperparameters
+
 From the baseline result we learn that with more steps:
 - Training loss decreases
 - Validation loss increases
@@ -36,6 +39,7 @@ Loss function changes to the following:
 ![Skärmavbild 2023-12-09 kl  15 37 37](https://github.com/rogoran/id2223_lab2/assets/98389590/550b4939-f837-4db7-a298-59fdb00841ec)
 Hence preventing that certain weights affect the outcome too much. 
 
+We also decreased the learning rate to prevent the weights to overshoot and miss the optimal values. This produced drastically worse results than the baseline which could be seen just after 2000 steps, and therefore the training was stopped. We tried again by only adding weight decay.
 
 "Fine tuned" parameters:
 
@@ -52,13 +56,19 @@ Result
 
 Unfortuntaley, this did not result in a desired outcome as validation loss keeps increasing and WER values are too high. This may be due to weight decay being too small hence not hjaving the desired effect. Another possible explanation is that the amount of data we used is not sufficient for the complexity of the model. We may have gotten better result by using a less complex model but unfortunately was limited due to time constraints.
 
-(b) data-centric approach - identify new data sources that enable you to train a better model that one provided in the blog post
+#Modify model architecture
+Fine-tuning can be done through modification of the model architecture which can be done by removing or adding layers, changing the number of nodes in a layer etc. In our case we would like to try reducing the amount of layers, or units per layer, to test if the complexity of the model is causing the overfitting, or perhaps change to a smaller model.
+
+Adjusting the model architecture requires a deeper understanding of the current transformer architecture. As time and computation power were constraints for us we focused on tuning the hyperparameters instead.
+
+
+##Data-centric approach - identify new data sources that enable you to train a better model that one provided in the blog post
 
 The following paper evaluated how data from L2 speakers affect the performance of a ASR model
 
 Knowles, A., & Mattsson, F. (2022). Understanding Automatic Speech Recognition for L2 Speakers and Unintended Discrimination in Artificial Intelligence (Dissertation). Retrieved from https://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-319360
 
-The paper shows how retraining a model with data from L2 speakers improves the model performance (lower WER score). We identified these data sources since they are WAV files which can be encoded and used as training data for the Whisper model.
+The paper shows how retraining a model with data from L2 speakers improves the model performance (lower WER score). 
 
 Using additional, but different data can make the model more nuanced due to the following factors: 
 
@@ -84,5 +94,5 @@ Increased Vocabulary Coverage:
 
 However, it's important to note that the effectiveness of retraining with L2 speaker data depends on various factors, including the quality and quantity of the added data, the initial model architecture, and the characteristics of the target user population. The specific insights from the paper you mentioned would provide more context and details regarding the observed improvements in ASR performance for L2 speakers.
 
-The paper used datasets Ville (~2 hours of labeled speech) and Språkcafé (unknown length). We tried to contact the authors to retrieve the data but to no success. 
+The paper used datasets Ville (~2 hours of labeled speech) and Språkcafé (unknown length). We tried to contact the authors to retrieve the data but to no
 
