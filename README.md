@@ -54,7 +54,35 @@ Unfortuntaley, this did not result in a desired outcome as validation loss keeps
 
 (b) data-centric approach - identify new data sources that enable you to train a better model that one provided in the blog post
 
-Unfortunately we couldn't access any new data sources, but we would like to try this dataset:
-HÄMTA LÄNK TILL ALFREDS
+The following paper evaluated how data from L2 speakers affect the performance of a ASR model
 
-We believe this data could improve the model since it Swedish
+Knowles, A., & Mattsson, F. (2022). Understanding Automatic Speech Recognition for L2 Speakers and Unintended Discrimination in Artificial Intelligence (Dissertation). Retrieved from https://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-319360
+
+The paper shows how retraining a model with data from L2 speakers improves the model performance (lower WER score). 
+
+Using additional, but different data can make the model more nuanced due to the following factors: 
+
+Diversity of Speech Patterns:
+- L2 speakers often exhibit diverse speech patterns, including different accents, intonations, and pronunciation variations compared to native speakers.
+- Adding data from L2 speakers can help the ASR model become more robust and adaptable to a wider range of speech styles and linguistic characteristics.
+  
+Improved Generalization:
+- By incorporating data from L2 speakers, the ASR model may improve its ability to generalize across different linguistic backgrounds.
+- This helps the model to better handle variability in pronunciation and linguistic nuances that may not be present in the training data consisting solely of native speakers.
+
+Reducing Bias and Discrimination:
+- Training an ASR model solely on data from native speakers may lead to biases and discrimination against non-native speakers.
+- Including data from L2 speakers can help mitigate such biases and promote fairness in the model's performance across diverse user groups.
+
+Domain Adaptation:
+- L2 speakers may use the language in different contexts or domains compared to native speakers.
+- Retraining the model with data from L2 speakers helps it adapt to the specific characteristics of the target user group, potentially leading to better performance in real-world scenarios.
+
+Increased Vocabulary Coverage:
+- L2 speakers may use a broader vocabulary or different terminology than native speakers.
+- Incorporating data from L2 speakers can enhance the model's vocabulary coverage, making it more effective in recognizing a wider range of words and phrases.
+
+However, it's important to note that the effectiveness of retraining with L2 speaker data depends on various factors, including the quality and quantity of the added data, the initial model architecture, and the characteristics of the target user population. The specific insights from the paper you mentioned would provide more context and details regarding the observed improvements in ASR performance for L2 speakers.
+
+The paper used datasets Ville (~2 hours of labeled speech) and Språkcafé (unknown length). We tried to contact the authors to retrieve the data but to no
+
