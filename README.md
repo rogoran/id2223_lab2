@@ -1,6 +1,10 @@
 Link to app: https://huggingface.co/Siphh
 
 
+Dataset used: 
+
+50% of common voice swedish dataset: https://commonvoice.mozilla.org/sv-SE 
+
 Work done in effort to improve model performance: 
 (a) model-centric approach 
 
@@ -27,7 +31,9 @@ From the baseline result we learn that with more steps:
 This means that the model probably overfits at some point around 2000.
 
 To prevent the model overfitting, we tried to add weight decay because applying it to the parameters of your seq2seq model can help prevent overfitting and improve generalization performance. 
-Loss function changes to the following: ![Skärmavbild 2023-12-09 kl  15 37 37](https://github.com/rogoran/id2223_lab2/assets/98389590/550b4939-f837-4db7-a298-59fdb00841ec)
+Loss function changes to the following: 
+
+![Skärmavbild 2023-12-09 kl  15 37 37](https://github.com/rogoran/id2223_lab2/assets/98389590/550b4939-f837-4db7-a298-59fdb00841ec)
 Hence preventing that certain weights affect the outcome too much. 
 
 
@@ -44,7 +50,7 @@ Result
 | 3000 | 0.001300      | 0.408694         | 84.5223   |
 | 4000 | 0.000900      | 0.418169         | 88.0566   |
 
-
+Unfortuntaley, this did not result in a desired outcome as validation loss keeps increasing and WER values are too high. One possible explanation is that the amount of data we used is not sufficient for the complexity of the model. We may have gotten better result by using a less complex model but unfortunately was limited due to time constraints.
 
 (b) data-centric approach - identify new data sources that enable you to train a better model that one provided in the blog post
 
