@@ -1,4 +1,4 @@
-Link to app: https://huggingface.co/Siphh
+Link to app: [https://huggingface.co/Siphh](https://huggingface.co/spaces/Siphh/lab2_scalable)
 
 
 Dataset used: 
