@@ -50,7 +50,7 @@ Result
 | 3000 | 0.001300      | 0.408694         | 84.5223   |
 | 4000 | 0.000900      | 0.418169         | 88.0566   |
 
-Unfortuntaley, this did not result in a desired outcome as validation loss keeps increasing and WER values are too high. One possible explanation is that the amount of data we used is not sufficient for the complexity of the model. We may have gotten better result by using a less complex model but unfortunately was limited due to time constraints.
+Unfortuntaley, this did not result in a desired outcome as validation loss keeps increasing and WER values are too high. This may be due to weight decay being too small hence not hjaving the desired effect. Another possible explanation is that the amount of data we used is not sufficient for the complexity of the model. We may have gotten better result by using a less complex model but unfortunately was limited due to time constraints.
 
 (b) data-centric approach - identify new data sources that enable you to train a better model that one provided in the blog post
 
