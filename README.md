@@ -9,7 +9,7 @@ Default hyperparameters:
 
 <img width="760" alt="Skärmavbild 2023-12-06 kl  10 21 50" src="https://github.com/rogoran/id2223_lab2/assets/98389590/5d7210e0-2ac1-4613-83be-188a3d60114e">
 
-Baseline
+Result
 
 | Step | Training Loss | Validation Loss | WER       |
 |------|---------------|------------------|-----------|
@@ -25,6 +25,18 @@ From the baseline result we learn that with more steps:
 - WER is initially very high, then hits its lowest value for 2000, and then increases again.
 
 This means that the model probably overfits at some point around 2000.
+
+"Fine tuned" parameters:
+
+
+Result
+
+| Step | Training Loss | Validation Loss | WER       |
+|------|---------------|------------------|-----------|
+| 1000 | 0.059600      | 0.326396         | 111.4624  |
+| 2000 | 0.006700      | 0.386743         | 86.8785   |
+| 3000 | 0.001300      | 0.408694         | 84.5223   |
+| 4000 | 0.000900      | 0.418169         | 88.0566   |
 
 
 
