@@ -22,9 +22,9 @@ Result
 
 We now want to improve the model performance which can be done in different ways. One could use a model-centric approach, or a data-centric.
 
-## Model-centric: 
+# Model-centric: 
 
-# Tune hyperparameters
+## Tune hyperparameters
 
 From the baseline result we learn that with more steps:
 - Training loss decreases
@@ -56,13 +56,13 @@ Result
 
 Unfortuntaley, this did not result in a desired outcome as validation loss keeps increasing and WER values are too high. This may be due to weight decay being too small hence not hjaving the desired effect. Another possible explanation is that the amount of data we used is not sufficient for the complexity of the model. We may have gotten better result by using a less complex model but unfortunately was limited due to time constraints.
 
-# Modify model architecture
+## Modify model architecture
 Fine-tuning can be done through modification of the model architecture which can be done by removing or adding layers, changing the number of nodes in a layer etc. In our case we would like to try reducing the amount of layers, or units per layer, to test if the complexity of the model is causing the overfitting, or perhaps change to a smaller model.
 
 Adjusting the model architecture requires a deeper understanding of the current transformer architecture. As time and computation power were constraints for us we focused on tuning the hyperparameters instead.
 
 
-## Data-centric approach - identify new data sources that enable you to train a better model that one provided in the blog post
+# Data-centric approach - identify new data sources that enable you to train a better model that one provided in the blog post
 
 The following paper evaluated how data from L2 speakers affect the performance of a ASR model
 
